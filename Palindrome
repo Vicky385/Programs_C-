@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{  
+clrscr();
+int rev,a,d,a1;
+cout<<"\n\n Enter the number:";
+cin>>a;
+rev=0;
+a1=a;
+while(a!=0)
+{  
+d=a%10;
+rev=rev*10+d;
+a=a/10;
+}
+if (rev==a1)
+cout<<"\n It is a Palindrome";
+else
+cout<<"\n Sorry!!!!! It is not a palindrome";
+getch();
+}
