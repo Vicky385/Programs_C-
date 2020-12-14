@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ 
+clrscr();
+int n, count=1,i=0, j=1, sum=0;
+cout<<"Enter the number upto which the fibonacci series is to be shown: ";
+cin>>n;
+cout<<"\n The fibonacci series is:\n";
+cout<<i;
+while(count<n)
+{ sum=i+j;
+cout<<" "<<sum;
+       j=i;
+       i=sum;
+count++;
+     }
+getch();
+  }
