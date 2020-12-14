@@ -1,0 +1,173 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+int a[3][3],b[3][3],c[3][3],i,j,k,sum=0,d;
+char ch;
+clrscr();
+do
+  {
+cout<<"\t Main Menu:\n Press\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Transpose\n Enter the number of operation";
+cin>>d;
+clrscr();
+if(d==1||d==2||d==4)
+  {
+cout<<"Enter the First matrix:\n";
+for(i=0;i<3;i++)
+       {
+	for(j=0;j<3;j++)
+	  {
+	cin>>a[i][j];
+	   }
+       }
+cout<<"Enter the Second matrix:\n";
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	cin>>b[i][j];
+	   }
+	   }
+cout<<"The First matrix is:\n";
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	cout<<"\t"<<a[i][j];
+      }
+
+cout<<"\n";
+      }
+cout<<"The Second matrix is:\n";
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	cout<<"\t"<<b[i][j];
+      }
+cout<<"\n";
+      }
+clrscr();
+  }
+else if(d==3||d==5||d==6)
+  {
+cout<<"Enter the matrix:\n";
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	cin>>a[i][j];
+	   }
+	   }
+	cout<<"Matrix entered by you is:\n";
+	for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	cout<<"\t"<<a[i][j];
+	   }
+	cout<<"\n";
+	   }
+	cout<<"\n";
+
+    }
+else
+cout<<"Wrong selection\n";
+
+switch(d)
+   {
+case 1:
+
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	c[i][j]=a[i][j]+b[i][j];
+      }
+       }
+	cout<<"The sum of two matrix is:\n";
+for(i=0;i<3;i++)
+  {
+for(j=0;j<3;j++)
+      {
+	cout<<"\t"<<c[i][j];
+      }
+	cout<<"\n";
+  }
+
+break;
+case 2:
+
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	c[i][j]=a[i][j]-b[i][j];
+      }
+       }
+	cout<<"The subtraction of two matrix is:\n";
+for(i=0;i<3;i++)
+  {
+for(j=0;j<3;j++)
+      {
+	cout<<"\t"<<c[i][j];
+      }
+	cout<<"\n";
+  }
+
+break;
+case 3:
+for(i=0;i<3;i++)
+{ //row of first matrix
+	for(j=0;j<3;j++)
+	{  //column of second matrix
+	sum=0;
+	for(k=0;k<3;k++)
+	   {
+	sum=sum+a[i][k]*b[k][j];
+	       }
+	c[i][j]=sum;
+	 }
+      }
+
+cout<<"The multiplication of two matrix is:\n";
+for(i=0;i<3;i++)
+  {
+for(j=0;j<3;j++)
+      {
+	cout<<"\t"<<c[i][j];
+      }
+	cout<<"\n";
+  }
+break;
+case 4:
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	c[i][j]=a[j][i];
+	   }
+	   }
+cout<<"The Transpose matrix is:\n";
+for(i=0;i<3;i++)
+      {
+for(j=0;j<3;j++)
+      {
+	cout<<"\t"<<c[i][j];
+      }
+
+cout<<"\n";
+      }
+break;
+
+default:
+cout<<"Try Again";
+
+    };
+cout<<"Do you want to continue:(y/n)";
+cin>>ch;
+clrscr();
+    }
+while(ch=='y'||ch=='Y');
+getch();
+}
