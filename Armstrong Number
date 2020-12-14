@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+int i, j, l, m, n, t;
+cout<<"\n Enter the number to be checked :";
+cin>>i;
+    j=i%100;
+    l=j%10;
+    m=j/10;
+    n=i/100;
+t=(l*l*l)+(m*m*m)+(n*n*n);
+if(t==i)
+cout<<"\n The given number is an armstrong number";
+else
+cout<<"\n Sorry!!! the given number is not an armstrong number:";
+getch();
+}
